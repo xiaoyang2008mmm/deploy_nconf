@@ -1,11 +1,20 @@
 $(document).ready(function() {
     $('body').on('click', 'button[id*=v_edit]', function() {
-            alert("111");
+	    var $this = $(this);
+	    var $host = $($this.parent().parent().find('strong')).text();
+	    //console.log($host);
+	    alert($host);
     });
     $('body').on('click', 'button[id*=v_test]', function() {
-            alert("2222");
+	    var $this = $(this);
+	    var $host = $($this.parent().parent().find('strong')).text();
+	    //console.log($host);
+	    alert($host);
     });
     $('body').on('click', 'button[id*=v_reload]', function() {
-            alert("3333");
+	    var $this = $(this);
+	    var $host = $($this.parent().parent().find('strong')).text();
+	    //console.log($host);
+	    alert($host);
     });
 });
