@@ -18,6 +18,7 @@ $(document).ready(function() {
             },
             function(data) {
                 alert(data);
+		$("#vhost_comment").text(data);
             });
         };
 

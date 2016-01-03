@@ -41,5 +41,12 @@ class Host_vhost_Handler(BaseHandler):
         #role_name  = self.get_argument("role_name")
         #role_desc  = self.get_argument("role_desc")
 	print self.request.arguments
-	self.write("asdsa")
+	data = """ 
+	qwdwqdwqddwq
+		wdqwdwq
+		wdqwdqwdqw
+		wdqwdqw
+	wdqwd wdqwd
+	"""
+	self.write(data)
 
