@@ -41,7 +41,7 @@ $(document).ready(function() {
     });
     ////////////////提交修改后的内容
     $("#comment_post").click(function() {
-	if($("#comment_post").val() == "") {
+	if($("#vhost_comment").val() == "") {
 	    $("#vhost_error").addClass("has-error");
 	}else{
 	    post_func();
@@ -49,7 +49,7 @@ $(document).ready(function() {
      });
     function post_func() {
         var msg = "确定要提交吗?";
-	var $v_after =$("#vhost_comment").text();
+	var $v_after =$("#vhost_comment").val();
         if (confirm(msg) == true) {
             $.post("/post_vhost/", {
                 $v_after: $v_after,
@@ -57,6 +57,7 @@ $(document).ready(function() {
             function(data) {
                 alert(data);
             });
+	    $("#vhost_comment").val("");
         } else {
             return false;
         }
