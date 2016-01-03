@@ -33,3 +33,13 @@ class get_host_list(object):
 	return self.cf.get("nconf", "nconf_vhost")
 
 
+class Host_vhost_Handler(BaseHandler):
+    '''
+    get host and vhost file 
+    '''
+    def post(self):
+        #role_name  = self.get_argument("role_name")
+        #role_desc  = self.get_argument("role_desc")
+	print self.request.arguments
+	self.write("asdsa")
+
