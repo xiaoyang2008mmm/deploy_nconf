@@ -7,5 +7,6 @@ HANDLERS =[
 	   (r"/base/",		Base_Handler),
 	   (r"/nconf/",		Nconf_Handler),
 	   (r"/host_vhost/",	Host_vhost_Handler),
+	   (r"/post_vhost/",	Post_vhost_Handler),
 	]
 #HANDLERS +=[(r"/chart/", ChartHandler)]

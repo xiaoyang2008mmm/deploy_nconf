@@ -50,3 +50,17 @@ class Host_vhost_Handler(BaseHandler):
 	"""
 	self.write(data)
 
+
+
+
+class Post_vhost_Handler(BaseHandler):
+    '''
+    get edit vhost file comment  for ansible file to server
+    '''
+    def post(self):
+	print self.request.arguments
+	data = """ 
+	 提交OK
+	"""
+	self.write(data)
+

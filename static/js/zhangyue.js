@@ -39,4 +39,23 @@ $(document).ready(function() {
         //console.log($host);
         alert($host);
     });
+    ////////////////提交修改后的内容
+    $("#comment_post").click(function() {
+	post_func();
+     });
+    function post_func() {
+        var msg = "确定要提交吗?";
+	var $v_after =$("#vhost_comment").text();
+        if (confirm(msg) == true) {
+            $.post("/post_vhost/", {
+                $v_after: $v_after,
+            },
+            function(data) {
+                alert(data);
+            });
+        } else {
+            return false;
+        }
+    }
+
 });
