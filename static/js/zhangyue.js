@@ -42,7 +42,7 @@ $(document).ready(function() {
     ////////////////提交修改后的内容
     $("#comment_post").click(function() {
 	if($("#comment_post").val() == "") {
-	    alert("不允许提交");
+	    $("#vhost_error").addClass("has-error");
 	}else{
 	    post_func();
 	};
