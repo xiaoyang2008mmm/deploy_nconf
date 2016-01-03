@@ -41,7 +41,11 @@ $(document).ready(function() {
     });
     ////////////////提交修改后的内容
     $("#comment_post").click(function() {
-	post_func();
+	if($("#comment_post").val() == "") {
+	    alert("不允许提交");
+	}else{
+	    post_func();
+	};
      });
     function post_func() {
         var msg = "确定要提交吗?";
